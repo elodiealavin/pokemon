@@ -30,15 +30,17 @@ const TypeList = () => {
     <p> Loading ...</p>
   ) : (
     <main>
-      <div>
-        <h1>Types List</h1>
-      </div>
       {data.pokemon.map((elem) => {
         console.log("console3", elem);
-
+        const tab = elem.pokemon.url.split("/");
+        const index = tab[tab.length - 2];
         return (
           <div key={elem.url}>
             <span>{elem.pokemon.name}</span>;
+            <img
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`}
+              alt=""
+            />
           </div>
         );
       })}

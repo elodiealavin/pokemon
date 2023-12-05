@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Pokemon = () => {
   const [data, setData] = useState();
@@ -31,11 +31,13 @@ const Pokemon = () => {
         const index = tab[tab.length - 2];
         return (
           <div key={result.url}>
-            <span>{result.name}</span>;
-            <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`}
-              alt=""
-            />
+            <Link to={"/pokemon/:nomdupokémon"}>
+              <span>{result.name}</span>;
+              <img
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`}
+                alt=""
+              />
+            </Link>
           </div>
         );
       })}

@@ -28,16 +28,11 @@ const Type = () => {
     <main>
       {data.results.map((result) => {
         // console.log(result);
-        const tab = result.url.split("/");
-        const index = tab[tab.length - 2];
+
         return (
           <div key={result.url}>
             <Link to={`/type/${result.name}`}>
               <span>{result.name}</span>;
-              <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index}.png`}
-                alt=""
-              />
             </Link>
           </div>
         );

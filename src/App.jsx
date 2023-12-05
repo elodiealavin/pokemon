@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./Components/Header";
 import Pokemon from "./pages/Pokemon";
+import PokemonName from "./pages/PokemonName";
 import Type from "./pages/Type";
 import TypeList from "./pages/TypeList";
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pokemon" element={<Pokemon />} />
+        <Route path="/pokemon/:nomdupokémon" element={<PokemonName />} />
         <Route path="/type" element={<Type />} />
         <Route path="/type/:type" element={<TypeList />} />
       </Routes>
