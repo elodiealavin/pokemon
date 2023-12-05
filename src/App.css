@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: red 2px solid;
+}
+
+.logo {
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+header button {
+  background-color: white;
+  margin-right: 30px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 25px;
+  padding: 20px;
+}
+
+button:hover {
+  color: gray;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+  font-size: 50px;
+}
+main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 50px;
+}
